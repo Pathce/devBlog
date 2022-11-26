@@ -5075,9 +5075,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dev-blog@workspace:packages/front":
+"dev-blog@workspace:packages/front_end":
   version: 0.0.0-use.local
-  resolution: "dev-blog@workspace:packages/front"
+  resolution: "dev-blog@workspace:packages/front_end"
   dependencies:
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^13.4.0
