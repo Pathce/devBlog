@@ -1,12 +1,24 @@
 {
   "name": "dev_blog",
+  "scripts": {
+    "front-install": "yarn workspace dev_blog_frontend install",
+    "front-start": "yarn workspace dev_blog_frontend start",
+    "front-build": "yarn workspace dev_blog_frontend build",
+    "front-test": "yarn workspace dev_blog_frontend test",
+    "front-eject": "yarn workspace dev_blog_frontend eject"
+  },
   "packageManager": "yarn@3.3.0",
   "devDependencies": {
+    "@types/styled-components": "^5.1.26",
     "prettier": "^2.8.0",
+    "styled-components": "^5.3.6",
     "typescript": "^4.9.3"
   },
   "workspaces": [
     "packages/*",
     "packages/*/*"
-  ]
+  ],
+  "dependencies": {
+    "react-query": "^3.39.2"
+  }
 }
