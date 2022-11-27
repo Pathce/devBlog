@@ -51,7 +51,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.1.0, @babel/core@npm:^7.11.1, @babel/core@npm:^7.12.3, @babel/core@npm:^7.16.0, @babel/core@npm:^7.7.2, @babel/core@npm:^7.8.0":
+"@babel/core@npm:^7.1.0, @babel/core@npm:^7.11.1, @babel/core@npm:^7.12.3, @babel/core@npm:^7.16.0, @babel/core@npm:^7.20.2, @babel/core@npm:^7.7.2, @babel/core@npm:^7.8.0":
   version: 7.20.2
   resolution: "@babel/core@npm:7.20.2"
   dependencies:
@@ -1318,7 +1318,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.11.0, @babel/preset-env@npm:^7.12.1, @babel/preset-env@npm:^7.16.4":
+"@babel/preset-env@npm:^7.11.0, @babel/preset-env@npm:^7.12.1, @babel/preset-env@npm:^7.16.4, @babel/preset-env@npm:^7.20.2":
   version: 7.20.2
   resolution: "@babel/preset-env@npm:7.20.2"
   dependencies:
@@ -1418,7 +1418,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-react@npm:^7.12.5, @babel/preset-react@npm:^7.16.0":
+"@babel/preset-react@npm:^7.12.5, @babel/preset-react@npm:^7.16.0, @babel/preset-react@npm:^7.18.6":
   version: 7.18.6
   resolution: "@babel/preset-react@npm:7.18.6"
   dependencies:
@@ -1434,7 +1434,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@npm:^7.16.0":
+"@babel/preset-typescript@npm:^7.16.0, @babel/preset-typescript@npm:^7.18.6":
   version: 7.18.6
   resolution: "@babel/preset-typescript@npm:7.18.6"
   dependencies:
@@ -2232,6 +2232,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react/ui@workspace:packages/ui":
+  version: 0.0.0-use.local
+  resolution: "@react/ui@workspace:packages/ui"
+  dependencies:
+    "@babel/core": ^7.20.2
+    "@babel/preset-env": ^7.20.2
+    "@babel/preset-react": ^7.18.6
+    "@babel/preset-typescript": ^7.18.6
+    "@testing-library/jest-dom": ^5.16.5
+    "@testing-library/react": ^13.4.0
+    "@testing-library/user-event": ^13.5.0
+    "@types/babel__core": ^7
+    "@types/babel__preset-env": ^7
+    "@types/jest": ^27.5.2
+    "@types/node": ^16.18.3
+    "@types/react": ^18.0.25
+    "@types/react-dom": ^18.0.9
+    "@types/styled-components": ^5.1.26
+    "@types/testing-library__jest-dom": ^5.14.5
+    babel-loader: ^9.1.0
+    eslint-config-prettier: ^8.5.0
+    eslint-config-react: ^1.1.7
+    eslint-config-react-app: ^7.0.1
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-query: ^3.39.2
+    react-scripts: 5.0.1
+    styled-components: ^5.3.6
+    typescript: ^4.9.3
+    web-vitals: ^2.1.4
+  languageName: unknown
+  linkType: soft
+
 "@rollup/plugin-babel@npm:^5.2.0":
   version: 5.3.1
   resolution: "@rollup/plugin-babel@npm:5.3.1"
@@ -2551,7 +2584,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/babel__core@npm:^7.0.0, @types/babel__core@npm:^7.1.14":
+"@types/babel__core@npm:^7, @types/babel__core@npm:^7.0.0, @types/babel__core@npm:^7.1.14":
   version: 7.1.20
   resolution: "@types/babel__core@npm:7.1.20"
   dependencies:
@@ -2570,6 +2603,13 @@ __metadata:
   dependencies:
     "@babel/types": ^7.0.0
   checksum: 20effbbb5f8a3a0211e95959d06ae70c097fb6191011b73b38fe86deebefad8e09ee014605e0fd3cdaedc73d158be555866810e9166e1f09e4cfd880b874dcb0
+  languageName: node
+  linkType: hard
+
+"@types/babel__preset-env@npm:^7":
+  version: 7.9.2
+  resolution: "@types/babel__preset-env@npm:7.9.2"
+  checksum: a905ed92a3f602384966153e74a94790425e98af54e392a7fcfb5c5ded2f2a58c49a9fa64a0cb506fbffb8169ad25b56ea87983c812a4fb880f0716668c8c085
   languageName: node
   linkType: hard
 
@@ -2936,7 +2976,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/styled-components@npm:^5, @types/styled-components@npm:^5.1.26":
+"@types/styled-components@npm:^5.1.26":
   version: 5.1.26
   resolution: "@types/styled-components@npm:5.1.26"
   dependencies:
@@ -3803,6 +3843,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-loader@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "babel-loader@npm:9.1.0"
+  dependencies:
+    find-cache-dir: ^3.3.2
+    schema-utils: ^4.0.0
+  peerDependencies:
+    "@babel/core": ^7.12.0
+    webpack: ">=5"
+  checksum: 774758febd1e8ca804abcae3b8f65634330dc688837424d0946f06d1386914de43435cce691710fa144eccdf1292cf883439ac3598ce7320916acfaaa2372641
+  languageName: node
+  linkType: hard
+
 "babel-plugin-istanbul@npm:^6.1.1":
   version: 6.1.1
   resolution: "babel-plugin-istanbul@npm:6.1.1"
@@ -4152,6 +4205,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"button@workspace:packages/components/button":
+  version: 0.0.0-use.local
+  resolution: "button@workspace:packages/components/button"
+  dependencies:
+    "@types/react": ^18.0.25
+    capitalize: "workspace:*"
+    react: ^18.2.0
+    typescript: ^4.9.3
+  languageName: unknown
+  linkType: soft
+
 "bytes@npm:3.0.0":
   version: 3.0.0
   resolution: "bytes@npm:3.0.0"
@@ -4265,6 +4329,14 @@ __metadata:
   checksum: 7c9d2641e8e8f3ddf9af14c4ce47266a9d8fd1fc0243626049ff1b2eca4bf02938ff440813cc3feae3fa8d851ec8d1b9718044340c8d09bb4372d92d4f6b519c
   languageName: node
   linkType: hard
+
+"capitalize@workspace:*, capitalize@workspace:packages/utils/capitalize":
+  version: 0.0.0-use.local
+  resolution: "capitalize@workspace:packages/utils/capitalize"
+  dependencies:
+    typescript: ^4.9.3
+  languageName: unknown
+  linkType: soft
 
 "case-sensitive-paths-webpack-plugin@npm:^2.4.0":
   version: 2.4.0
@@ -5200,35 +5272,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "dev_blog@workspace:."
   dependencies:
-    "@types/styled-components": ^5.1.26
     prettier: ^2.8.0
-    react-query: ^3.39.2
-    styled-components: ^5.3.6
     typescript: ^4.9.3
-  languageName: unknown
-  linkType: soft
-
-"dev_blog_frontend@workspace:packages/components/main_page":
-  version: 0.0.0-use.local
-  resolution: "dev_blog_frontend@workspace:packages/components/main_page"
-  dependencies:
-    "@testing-library/jest-dom": ^5.16.5
-    "@testing-library/react": ^13.4.0
-    "@testing-library/user-event": ^13.5.0
-    "@types/jest": ^27.5.2
-    "@types/node": ^16.18.3
-    "@types/react": ^18.0.25
-    "@types/react-dom": ^18.0.9
-    "@types/styled-components": ^5
-    "@types/testing-library__jest-dom": ^5.14.5
-    eslint-config-prettier: ^8.5.0
-    eslint-config-react-app: ^7.0.1
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-scripts: 5.0.1
-    styled-components: ^5.3.6
-    typescript: ^4.9.3
-    web-vitals: ^2.1.4
   languageName: unknown
   linkType: soft
 
@@ -5717,6 +5762,13 @@ __metadata:
   peerDependencies:
     eslint: ^8.0.0
   checksum: a67e0821809e62308d6e419753fa2acfc7cd353659fab08cf34735f59c6c66910c0b6fda0471c4ec0d712ce762d65efc6431b39569f8d575e2d9bdfc384e0824
+  languageName: node
+  linkType: hard
+
+"eslint-config-react@npm:^1.1.7":
+  version: 1.1.7
+  resolution: "eslint-config-react@npm:1.1.7"
+  checksum: 15d3d7f78e720c225ac983fb6985825b561941f1c930116c96f8ab8600eb65db603f5ef200a10fabd51f8ef564c107e8eb0d3f69609bfdedfb50290227249a70
   languageName: node
   linkType: hard
 
@@ -6272,7 +6324,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-cache-dir@npm:^3.3.1":
+"find-cache-dir@npm:^3.3.1, find-cache-dir@npm:^3.3.2":
   version: 3.3.2
   resolution: "find-cache-dir@npm:3.3.2"
   dependencies:

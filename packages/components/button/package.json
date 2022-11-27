@@ -1,0 +1,15 @@
+{
+  "name": "button",
+  "packageManager": "yarn@3.3.0",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "capitalize": "workspace:*",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.25",
+    "typescript": "^4.9.3"
+  }
+}
