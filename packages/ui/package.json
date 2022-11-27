@@ -1,5 +1,5 @@
 {
-  "name": "dev_blog_frontend",
+  "name": "@react/ui",
   "version": "0.1.0",
   "private": true,
   "workspaces": [

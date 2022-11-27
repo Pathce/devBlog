@@ -1,11 +1,10 @@
 {
   "name": "dev_blog",
   "scripts": {
-    "front-install": "yarn workspace dev_blog_frontend install",
-    "front-start": "yarn workspace dev_blog_frontend start",
-    "front-build": "yarn workspace dev_blog_frontend build",
-    "front-test": "yarn workspace dev_blog_frontend test",
-    "front-eject": "yarn workspace dev_blog_frontend eject"
+    "main-start": "yarn workspace @react/ui start",
+    "main-build": "yarn workspace @react/ui build",
+    "main-test": "yarn workspace @react/ui test",
+    "main-eject": "yarn workspace @react/ui eject"
   },
   "packageManager": "yarn@3.3.0",
   "devDependencies": {

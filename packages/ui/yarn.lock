@@ -2232,6 +2232,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react/ui@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@react/ui@workspace:."
+  dependencies:
+    "@testing-library/jest-dom": ^5.16.5
+    "@testing-library/react": ^13.4.0
+    "@testing-library/user-event": ^13.5.0
+    "@types/jest": ^27.5.2
+    "@types/node": ^16.18.3
+    "@types/react": ^18.0.25
+    "@types/react-dom": ^18.0.9
+    "@types/styled-components": ^5
+    "@types/testing-library__jest-dom": ^5.14.5
+    eslint-config-prettier: ^8.5.0
+    eslint-config-react-app: ^7.0.1
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-scripts: 5.0.1
+    styled-components: ^5.3.6
+    typescript: ^4.9.3
+    web-vitals: ^2.1.4
+  languageName: unknown
+  linkType: soft
+
 "@rollup/plugin-babel@npm:^5.2.0":
   version: 5.3.1
   resolution: "@rollup/plugin-babel@npm:5.3.1"
@@ -5172,30 +5196,6 @@ __metadata:
   checksum: dc4601bbc6be850edb3c2dab7a0eaf5a6169a15ad201679c66d40ea1986df816eeaecd590047f15b0780285f3eeea13b82dca0d4c52a47e744a571e326a72dc9
   languageName: node
   linkType: hard
-
-"dev_blog_frontend@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "dev_blog_frontend@workspace:."
-  dependencies:
-    "@testing-library/jest-dom": ^5.16.5
-    "@testing-library/react": ^13.4.0
-    "@testing-library/user-event": ^13.5.0
-    "@types/jest": ^27.5.2
-    "@types/node": ^16.18.3
-    "@types/react": ^18.0.25
-    "@types/react-dom": ^18.0.9
-    "@types/styled-components": ^5
-    "@types/testing-library__jest-dom": ^5.14.5
-    eslint-config-prettier: ^8.5.0
-    eslint-config-react-app: ^7.0.1
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-scripts: 5.0.1
-    styled-components: ^5.3.6
-    typescript: ^4.9.3
-    web-vitals: ^2.1.4
-  languageName: unknown
-  linkType: soft
 
 "didyoumean@npm:^1.2.2":
   version: 1.2.2
