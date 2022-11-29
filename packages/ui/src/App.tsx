@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Button } from 'components';
+import { Button, TestServerComponent } from 'components';
 import { StyledLayout, StyledButton, lightTheme, darkTheme } from 'styled';
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
         <StyledLayout>
           <StyledButton variant={'primary'} onClick={toggleTheme}>Toggle Theme</StyledButton>
           <Button />
+          <TestServerComponent />
         </StyledLayout>
       </ThemeProvider>
     </div>
