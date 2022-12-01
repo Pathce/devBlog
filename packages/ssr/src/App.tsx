@@ -6,9 +6,9 @@ const App = (): JSX.Element => {
   }
 
   return (
-    <div>
+    <>
       <button onClick={onClickButton}>클릭</button>
-    </div>
+    </>
   );
 };
 
