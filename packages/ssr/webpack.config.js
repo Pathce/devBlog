@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: './src/index.tsx',
   devServer: {
     historyApiFallback: true,
     port: 3000,

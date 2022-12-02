@@ -1,14 +1,29 @@
 import React from "react";
+import { Route, Routes } from 'react-router-dom';
+import Helmet from 'react-helmet';
+
+import Home from './pages/Home';
+import News from './pages/News';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 const App = (): JSX.Element => {
-  const onClickButton = () => {
-    window.alert("clicked !!");
-  }
 
   return (
-    <>
-      <button onClick={onClickButton}>클릭</button>
-    </>
+    <div>
+      <Helmet>
+        <title>App</title>
+      </Helmet>
+      <Routes>
+        <Route path="/" element={(<Header />)} />
+        <Route path="/news" element={(<Header />)} />
+      </Routes>
+      <Routes>
+        <Route path="/" element={(<Home />)} />
+        <Route path="/news" element={(<News />)} />
+      </Routes>
+      <Footer />
+    </div>
   );
 };
 
