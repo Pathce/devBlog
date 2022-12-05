@@ -4,9 +4,11 @@ const webpack = require('webpack');
 const hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true';
 
 module.exports = {
-  mode: process.env.NODE_ENV === 'production' ? 'production' : 'devlopment',
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 
-  entry: [hotMiddlewareScript, './src/index.tsx'],
+  entry: {
+    server: [hotMiddlewareScript, './src/index.tsx']
+  },
 
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -14,7 +16,7 @@ module.exports = {
     publicPath: '/',
   },
 
-  modules: {
+  module: {
     rules: [
       {
         test: /\.tsx?$/,
