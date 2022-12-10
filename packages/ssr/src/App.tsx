@@ -1,23 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import Home from 'components/home';
+
 const App = (): JSX.Element => {
+  const onClick = () => {
+    console.log("Clicked!");
+    document.getElementById("test")!.innerHTML = `${document.getElementById("test")!.innerHTML} Button Clicked!`;
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Home></Home>
+        <div id="test">Test</div>
+        <button onClick={onClick}>Click</button>
       </header>
     </div>
   );
