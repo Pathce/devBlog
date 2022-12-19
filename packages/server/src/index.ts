@@ -13,22 +13,16 @@ const corsOptions = {
 
 app.use(express.json());
 
-app.get('/api/get/test-api', cors(corsOptions), function(req, res) {
-  console.log("[API SERVER] GET: TEST-API");
-  res.status(200).json({
-    "result": "SUCCESS"
-  });
-});
-
 // [ LOGIN ]
+// TEST 용 ID, PW
+const userInfo = {
+  id: "test",
+  pw: "test12#$"
+}
 app.options('*', cors(corsOptions));
 app.post('/api/login', cors(corsOptions), (req, res) => {
-  console.log("Try Login . . .");
-  res.status(200).json({
-    "result": "TEST"
-  });
-  console.log(req.rawHeaders);
-  console.log(req.body);
+  if (req.body.id === userInfo.id && req.body.pw === userInfo.pw) res.status(200).json({"result": "TEST"});
+  else res.status(400).json({"error": "Invalid account"});
 });
 
 app.listen(PORT, () => {
