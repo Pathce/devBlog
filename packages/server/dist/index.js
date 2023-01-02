@@ -13,10 +13,10 @@
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"../../.yarn/cache/express-npm-4.18.2-bb15ff679a-3c4b9b0768.zip/node_modules/express/index.js\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var cors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! cors */ \"../../.yarn/cache/cors-npm-2.8.5-c9935a2d12-ced838404c.zip/node_modules/cors/lib/index.js\");\n/* harmony import */ var cors__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(cors__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst PORT = process.env.PORT || 3010;\nconst app = express__WEBPACK_IMPORTED_MODULE_0___default()();\nconsole.log(\"SERVER RUNNING . . . \");\nconst corsOptions = {\n  origin: 'http://localhost:3000',\n  credentials: true\n};\napp.use(express__WEBPACK_IMPORTED_MODULE_0___default().json());\napp.get('/api/get/test-api', cors__WEBPACK_IMPORTED_MODULE_1___default()(corsOptions), function (req, res) {\n  console.log(\"[API SERVER] GET: TEST-API\");\n  res.status(200).json({\n    \"result\": \"SUCCESS\"\n  });\n});\n\n// [ LOGIN ]\napp.options('*', cors__WEBPACK_IMPORTED_MODULE_1___default()(corsOptions));\napp.post('/api/login', cors__WEBPACK_IMPORTED_MODULE_1___default()(corsOptions), (req, res) => {\n  console.log(\"Try Login . . .\");\n  res.status(200).json({\n    \"result\": \"TEST\"\n  });\n  console.log(req.rawHeaders);\n  console.log(req.body);\n});\napp.listen(PORT, () => {\n  console.log(`SERVER IS LISTENEING ON PORT ${PORT}`);\n});\n\n//# sourceURL=webpack://server/./src/index.ts?");
+eval("\n\nvar __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {\n  if (k2 === undefined) k2 = k;\n  var desc = Object.getOwnPropertyDescriptor(m, k);\n  if (!desc || (\"get\" in desc ? !m.__esModule : desc.writable || desc.configurable)) {\n    desc = {\n      enumerable: true,\n      get: function () {\n        return m[k];\n      }\n    };\n  }\n  Object.defineProperty(o, k2, desc);\n} : function (o, m, k, k2) {\n  if (k2 === undefined) k2 = k;\n  o[k2] = m[k];\n});\nvar __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {\n  Object.defineProperty(o, \"default\", {\n    enumerable: true,\n    value: v\n  });\n} : function (o, v) {\n  o[\"default\"] = v;\n});\nvar __importStar = this && this.__importStar || function (mod) {\n  if (mod && mod.__esModule) return mod;\n  var result = {};\n  if (mod != null) for (var k in mod) if (k !== \"default\" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);\n  __setModuleDefault(result, mod);\n  return result;\n};\nvar __importDefault = this && this.__importDefault || function (mod) {\n  return mod && mod.__esModule ? mod : {\n    \"default\": mod\n  };\n};\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nconst express_1 = __importStar(__webpack_require__(/*! express */ \"../../.yarn/cache/express-npm-4.18.2-bb15ff679a-3c4b9b0768.zip/node_modules/express/index.js\"));\nconst cors_1 = __importDefault(__webpack_require__(/*! cors */ \"../../.yarn/cache/cors-npm-2.8.5-c9935a2d12-ced838404c.zip/node_modules/cors/lib/index.js\"));\nconst PORT = process.env.PORT || 3010;\nconst app = (0, express_1.default)();\nconst router = (0, express_1.Router)();\nconsole.log(\"SERVER RUNNING . . . \");\nconst corsOptions = {\n  origin: 'http://localhost:3000',\n  credentials: true\n};\napp.use(express_1.default.json());\n// [ LOGIN ]\n// TEST 용 ID, PW\nconst userInfo = {\n  id: \"test\",\n  pw: \"test12#$\"\n};\napp.options('*', (0, cors_1.default)(corsOptions));\napp.post('/api/login', (0, cors_1.default)(corsOptions), (req, res) => {\n  const responseData = {\n    resultCode: 404\n  };\n  if (req.body.id === userInfo.id && req.body.pw === userInfo.pw) {\n    responseData.resultCode = 200;\n    responseData.data = {\n      msg: \"Login Success\",\n      token: \"TEST\"\n    };\n  } else {\n    responseData.resultCode = 400;\n    responseData.reason = \"Invalid Account\";\n  }\n  res.status(responseData.resultCode).json(responseData);\n});\napp.listen(PORT, () => {\n  console.log(`SERVER IS LISTENEING ON PORT ${PORT}`);\n});\n\n//# sourceURL=webpack://server/./src/index.ts?");
 
 /***/ }),
 
@@ -1459,44 +1459,9 @@ eval("module.exports = JSON.parse('{\"100\":\"Continue\",\"101\":\"Switching Pro
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/node module decorator */
@@ -1512,7 +1477,7 @@ eval("module.exports = JSON.parse('{\"100\":\"Continue\",\"101\":\"Switching Pro
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	var __webpack_exports__ = __webpack_require__("./src/index.ts");
 /******/ 	
 /******/ })()

@@ -2,6 +2,12 @@ import express, { response, Router } from 'express';
 import cors from 'cors';
 import jwtUtil from 'jwtUtil';
 
+interface ResponseData {
+  resultCode: number;
+  data?: object;
+  reason?: string;
+}
+
 const PORT = process.env.PORT || 3010;
 const app = express();
 const router = Router();
@@ -43,9 +49,3 @@ app.post('/api/login', cors(corsOptions), (req, res) => {
 app.listen(PORT, () => {
   console.log(`SERVER IS LISTENEING ON PORT ${PORT}`);
 });
-
-interface ResponseData {
-  resultCode: number;
-  data?: object;
-  reason?: string;
-}

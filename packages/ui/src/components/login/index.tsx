@@ -1,24 +1,14 @@
 import React, { useState } from 'react';
 
+import { login } from 'utils/api';
+
 const Template = (): JSX.Element => {
   const [id, setId] = useState<string>("");
   const [pw, setPw] = useState<string>("");
 
-  const onClick = () => {
-    fetch('http://localhost:3010/api/login', {
-      method: 'post',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        id: id,
-        pw: pw
-      })
-    })
-    .then((res) => res.json())
-    .then((res) => {
-      // main으로 이동할 구문 작성
-    })
+  const onClick = async () => {
+    const result = login(id, pw);
+    console.log(result);
   };
 
   const inputId = (e: React.ChangeEvent<HTMLInputElement>) => {
