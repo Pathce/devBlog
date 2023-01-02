@@ -1,8 +1,10 @@
-import express, { response } from 'express';
+import express, { response, Router } from 'express';
 import cors from 'cors';
+import jwtUtil from 'jwtUtil';
 
 const PORT = process.env.PORT || 3010;
 const app = express();
+const router = Router();
 
 console.log("SERVER RUNNING . . . ");
 

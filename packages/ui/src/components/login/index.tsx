@@ -17,7 +17,7 @@ const Template = (): JSX.Element => {
     })
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
+      // main으로 이동할 구문 작성
     })
   };
 
