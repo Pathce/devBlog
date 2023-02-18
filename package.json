@@ -16,6 +16,8 @@
     "packages/*/*"
   ],
   "dependencies": {
+    "global": "^4.4.0",
+    "vue": "^3.2.47",
     "webpack-cli": "^5.0.0"
   }
 }

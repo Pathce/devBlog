@@ -47,8 +47,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["global", "npm:4.4.0"],\
             ["prettier", "npm:2.8.0"],\
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"],\
+            ["vue", "npm:3.2.47"],\
             ["webpack-cli", "virtual:88af3c2530de5b267a542550e4baadfe57736e231182d9477b1d62f1d512579a45efa6009825de294f5e6f2bc48ac67b4a957b79eb4dfc4477baf1095ecfad40#npm:5.0.0"]\
           ],\
           "linkType": "SOFT"\
@@ -780,6 +782,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@babel/parser", [\
+        ["npm:7.20.15", {\
+          "packageLocation": "./.yarn/cache/@babel-parser-npm-7.20.15-f05df4b4ba-1d0f47ca67.zip/node_modules/@babel/parser/",\
+          "packageDependencies": [\
+            ["@babel/parser", "npm:7.20.15"],\
+            ["@babel/types", "npm:7.20.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:7.20.3", {\
           "packageLocation": "./.yarn/cache/@babel-parser-npm-7.20.3-dba5e30700-33bcdb45de.zip/node_modules/@babel/parser/",\
           "packageDependencies": [\
@@ -7883,6 +7893,140 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@vue/compiler-core", [\
+        ["npm:3.2.47", {\
+          "packageLocation": "./.yarn/cache/@vue-compiler-core-npm-3.2.47-bb08feddfe-9ccc2a0b89.zip/node_modules/@vue/compiler-core/",\
+          "packageDependencies": [\
+            ["@vue/compiler-core", "npm:3.2.47"],\
+            ["@babel/parser", "npm:7.20.15"],\
+            ["@vue/shared", "npm:3.2.47"],\
+            ["estree-walker", "npm:2.0.2"],\
+            ["source-map", "npm:0.6.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@vue/compiler-dom", [\
+        ["npm:3.2.47", {\
+          "packageLocation": "./.yarn/cache/@vue-compiler-dom-npm-3.2.47-a1a6348264-1eced735f8.zip/node_modules/@vue/compiler-dom/",\
+          "packageDependencies": [\
+            ["@vue/compiler-dom", "npm:3.2.47"],\
+            ["@vue/compiler-core", "npm:3.2.47"],\
+            ["@vue/shared", "npm:3.2.47"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@vue/compiler-sfc", [\
+        ["npm:3.2.47", {\
+          "packageLocation": "./.yarn/cache/@vue-compiler-sfc-npm-3.2.47-d9eca6b75b-4588a51331.zip/node_modules/@vue/compiler-sfc/",\
+          "packageDependencies": [\
+            ["@vue/compiler-sfc", "npm:3.2.47"],\
+            ["@babel/parser", "npm:7.20.15"],\
+            ["@vue/compiler-core", "npm:3.2.47"],\
+            ["@vue/compiler-dom", "npm:3.2.47"],\
+            ["@vue/compiler-ssr", "npm:3.2.47"],\
+            ["@vue/reactivity-transform", "npm:3.2.47"],\
+            ["@vue/shared", "npm:3.2.47"],\
+            ["estree-walker", "npm:2.0.2"],\
+            ["magic-string", "npm:0.25.9"],\
+            ["postcss", "npm:8.4.21"],\
+            ["source-map", "npm:0.6.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@vue/compiler-ssr", [\
+        ["npm:3.2.47", {\
+          "packageLocation": "./.yarn/cache/@vue-compiler-ssr-npm-3.2.47-c46fb0bb52-91bc6e4674.zip/node_modules/@vue/compiler-ssr/",\
+          "packageDependencies": [\
+            ["@vue/compiler-ssr", "npm:3.2.47"],\
+            ["@vue/compiler-dom", "npm:3.2.47"],\
+            ["@vue/shared", "npm:3.2.47"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@vue/reactivity", [\
+        ["npm:3.2.47", {\
+          "packageLocation": "./.yarn/cache/@vue-reactivity-npm-3.2.47-1182f7aa47-bd61134e4b.zip/node_modules/@vue/reactivity/",\
+          "packageDependencies": [\
+            ["@vue/reactivity", "npm:3.2.47"],\
+            ["@vue/shared", "npm:3.2.47"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@vue/reactivity-transform", [\
+        ["npm:3.2.47", {\
+          "packageLocation": "./.yarn/cache/@vue-reactivity-transform-npm-3.2.47-89701a53ab-6fe54374aa.zip/node_modules/@vue/reactivity-transform/",\
+          "packageDependencies": [\
+            ["@vue/reactivity-transform", "npm:3.2.47"],\
+            ["@babel/parser", "npm:7.20.15"],\
+            ["@vue/compiler-core", "npm:3.2.47"],\
+            ["@vue/shared", "npm:3.2.47"],\
+            ["estree-walker", "npm:2.0.2"],\
+            ["magic-string", "npm:0.25.9"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@vue/runtime-core", [\
+        ["npm:3.2.47", {\
+          "packageLocation": "./.yarn/cache/@vue-runtime-core-npm-3.2.47-d5ec5c27c7-56fd41368c.zip/node_modules/@vue/runtime-core/",\
+          "packageDependencies": [\
+            ["@vue/runtime-core", "npm:3.2.47"],\
+            ["@vue/reactivity", "npm:3.2.47"],\
+            ["@vue/shared", "npm:3.2.47"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@vue/runtime-dom", [\
+        ["npm:3.2.47", {\
+          "packageLocation": "./.yarn/cache/@vue-runtime-dom-npm-3.2.47-da74228cd1-8987d72761.zip/node_modules/@vue/runtime-dom/",\
+          "packageDependencies": [\
+            ["@vue/runtime-dom", "npm:3.2.47"],\
+            ["@vue/runtime-core", "npm:3.2.47"],\
+            ["@vue/shared", "npm:3.2.47"],\
+            ["csstype", "npm:2.6.21"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@vue/server-renderer", [\
+        ["npm:3.2.47", {\
+          "packageLocation": "./.yarn/cache/@vue-server-renderer-npm-3.2.47-b845561a5d-482fe3c9bb.zip/node_modules/@vue/server-renderer/",\
+          "packageDependencies": [\
+            ["@vue/server-renderer", "npm:3.2.47"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:487db916e160a571ff50687ed972004ec0078aa76b7fedf7bdabfd607dfed3ba7b2d1f51e99387f885501b4dbb11471c0ce20d647adb7ae38656bbc259642ae8#npm:3.2.47", {\
+          "packageLocation": "./.yarn/__virtual__/@vue-server-renderer-virtual-7de059ee50/0/cache/@vue-server-renderer-npm-3.2.47-b845561a5d-482fe3c9bb.zip/node_modules/@vue/server-renderer/",\
+          "packageDependencies": [\
+            ["@vue/server-renderer", "virtual:487db916e160a571ff50687ed972004ec0078aa76b7fedf7bdabfd607dfed3ba7b2d1f51e99387f885501b4dbb11471c0ce20d647adb7ae38656bbc259642ae8#npm:3.2.47"],\
+            ["@types/vue", null],\
+            ["@vue/compiler-ssr", "npm:3.2.47"],\
+            ["@vue/shared", "npm:3.2.47"],\
+            ["vue", "npm:3.2.47"]\
+          ],\
+          "packagePeers": [\
+            "@types/vue",\
+            "vue"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@vue/shared", [\
+        ["npm:3.2.47", {\
+          "packageLocation": "./.yarn/cache/@vue-shared-npm-3.2.47-efa4e85dc8-0aa711dc91.zip/node_modules/@vue/shared/",\
+          "packageDependencies": [\
+            ["@vue/shared", "npm:3.2.47"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@webassemblyjs/ast", [\
         ["npm:1.11.1", {\
           "packageLocation": "./.yarn/cache/@webassemblyjs-ast-npm-1.11.1-623d3d973e-1eee1534ad.zip/node_modules/@webassemblyjs/ast/",\
@@ -10807,6 +10951,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["csstype", [\
+        ["npm:2.6.21", {\
+          "packageLocation": "./.yarn/cache/csstype-npm-2.6.21-49408157d8-2ce8bc8323.zip/node_modules/csstype/",\
+          "packageDependencies": [\
+            ["csstype", "npm:2.6.21"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:3.1.1", {\
           "packageLocation": "./.yarn/cache/csstype-npm-3.1.1-3857baf48b-1f7b4f5fdd.zip/node_modules/csstype/",\
           "packageDependencies": [\
@@ -11119,8 +11270,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["dev_blog", "workspace:."],\
+            ["global", "npm:4.4.0"],\
             ["prettier", "npm:2.8.0"],\
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"],\
+            ["vue", "npm:3.2.47"],\
             ["webpack-cli", "virtual:88af3c2530de5b267a542550e4baadfe57736e231182d9477b1d62f1d512579a45efa6009825de294f5e6f2bc48ac67b4a957b79eb4dfc4477baf1095ecfad40#npm:5.0.0"]\
           ],\
           "linkType": "SOFT"\
@@ -12439,6 +12592,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/estree-walker-npm-1.0.1-e916593b23-7e70da5396.zip/node_modules/estree-walker/",\
           "packageDependencies": [\
             ["estree-walker", "npm:1.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:2.0.2", {\
+          "packageLocation": "./.yarn/cache/estree-walker-npm-2.0.2-dfab42f65c-6151e6f982.zip/node_modules/estree-walker/",\
+          "packageDependencies": [\
+            ["estree-walker", "npm:2.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -16719,6 +16879,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/postcss-npm-8.4.19-164042496a-62782723a3.zip/node_modules/postcss/",\
           "packageDependencies": [\
             ["postcss", "npm:8.4.19"],\
+            ["nanoid", "npm:3.3.4"],\
+            ["picocolors", "npm:1.0.0"],\
+            ["source-map-js", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:8.4.21", {\
+          "packageLocation": "./.yarn/cache/postcss-npm-8.4.21-9ad76bf58d-e39ac60ccd.zip/node_modules/postcss/",\
+          "packageDependencies": [\
+            ["postcss", "npm:8.4.21"],\
             ["nanoid", "npm:3.3.4"],\
             ["picocolors", "npm:1.0.0"],\
             ["source-map-js", "npm:1.0.2"]\
@@ -21485,6 +21655,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/vary-npm-1.1.2-b49f70ae63-ae0123222c.zip/node_modules/vary/",\
           "packageDependencies": [\
             ["vary", "npm:1.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["vue", [\
+        ["npm:3.2.47", {\
+          "packageLocation": "./.yarn/cache/vue-npm-3.2.47-487db916e1-3b586f61fd.zip/node_modules/vue/",\
+          "packageDependencies": [\
+            ["vue", "npm:3.2.47"],\
+            ["@vue/compiler-dom", "npm:3.2.47"],\
+            ["@vue/compiler-sfc", "npm:3.2.47"],\
+            ["@vue/runtime-dom", "npm:3.2.47"],\
+            ["@vue/server-renderer", "virtual:487db916e160a571ff50687ed972004ec0078aa76b7fedf7bdabfd607dfed3ba7b2d1f51e99387f885501b4dbb11471c0ce20d647adb7ae38656bbc259642ae8#npm:3.2.47"],\
+            ["@vue/shared", "npm:3.2.47"]\
           ],\
           "linkType": "HARD"\
         }]\
