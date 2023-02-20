@@ -1,17 +1,32 @@
-package com.devblog.backend.controller;
+package com.devblog.backend.Controller;
 
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import com.devblog.backend.User.Param;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
+import com.devblog.backend.Service.UserService;
+import com.devblog.backend.domain.User;
 
-@RestController
-public class userController {
+import java.time.LocalDateTime;
 
-  @PostMapping("/test")
-  public Param post(@RequestBody Param param) {
-    Param param1 = new Param();
-    param1.setName(param.getName());
-    return param1;
+@Controller
+public class UserController {
+  private final UserService userService;
+
+  public UserController(UserService userService) {
+    this.userService = userService;
+  }
+
+  @PostMapping(value = "/create")
+  @ResponseBody
+  public User create(@RequestBody User form) {
+    User user1 = new User();
+    user1.setUserName(form.getUserName());
+    user1.setUserId(form.getUserName());
+    user1.setRegDate(LocalDateTime.now());
+
+    userService.join(user1);
+    return user1;
   }
 }
