@@ -1,0 +1,8 @@
+{
+  "name": "front",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "yarn@3.6.0"
+}
